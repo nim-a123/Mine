@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mine game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="content-grid" >
+
+     
+        <div class=" balancegrid balance " >
+
+            <H3 class="BALANCE_TEXT" >  <span class="dollor" >$</span  > <span id="money_shower"></span>  </H3>
+            <h4 class="BALANCE_TEXT_small"  > <span>-</span>  <span id="money_fakebalance_shower"> </span> <span>-</span></h4>
+         
+            
+
+         </div>
+         
+      
+
+
+    <div>
+    <div class="verymain" >
+      
+       
+    <div class="Main flex grid" >
+        
+        <div >  <button class="mainchild" onclick="game_1_bomb2()" id="game_button_1_bomb2" ></button> </div>
+        <div >  <button class="mainchild" onclick="game_2_bomb2()" id="game_button_2_bomb2" ></button> </div>
+        <div >  <button class="mainchild" onclick="game_3_bomb2()" id="game_button_3_bomb2" ></button> </div>
+        <div >  <button class="mainchild" onclick="game_4_bomb2()" id="game_button_4_bomb2" ></button> </div>
+        <div >  <button class="mainchild" onclick="game_5_bomb2()" id="game_button_5_bomb2" ></button> </div>
+
+        <div >  <button class="mainchild" onclick="game_6_bomb2()" id="game_button_6_bomb2" ></button> </div>
+        <div >  <button class="mainchild" onclick="game_7_bomb2()" id="game_button_7_bomb2" ></button> </div>
+        <div >  <button class="mainchild" onclick="game_8_bomb2()" id="game_button_8_bomb2" ></button> </div>
+        <div >  <button class="mainchild" onclick="game_9_bomb2()" id="game_button_9_bomb2" ></button> </div>
+        <div >  <button class="mainchild" onclick="game_10_bomb2()" id="game_button_10_bomb2" ></button> </div>
+        
+        <div >  <button class="mainchild" onclick="game_11_bomb2()" id="game_button_11_bomb2" ></button> </div>
+        <div >  <button class="mainchild" onclick="game_12_bomb2()" id="game_button_12_bomb2" ></button> </div>
+        <div >  <button class="mainchild" onclick="game_13_bomb2()" id="game_button_13_bomb2" ></button> </div>
+        <div >  <button class="mainchild" onclick="game_14_bomb2()" id="game_button_14_bomb2" ></button> </div>
+        <div >  <button class="mainchild" onclick="game_15_bomb2()" id="game_button_15_bomb2" ></button> </div>
+
+        <div >  <button class="mainchild" onclick="game_16_bomb2()" id="game_button_16_bomb2" ></button> </div>
+        <div >  <button class="mainchild" onclick="game_17_bomb2()" id="game_button_17_bomb2" ></button> </div>
+        <div >  <button class="mainchild" onclick="game_18_bomb2()" id="game_button_18_bomb2" ></button> </div>
+        <div >  <button class="mainchild" onclick="game_19_bomb2()" id="game_button_19_bomb2" ></button> </div>
+        <div >  <button class="mainchild" onclick="game_20_bomb2()" id="game_button_20_bomb2" ></button> </div>
+
+        <div >  <button class="mainchild" onclick="game_21_bomb2()" id="game_button_21_bomb2" ></button> </div>
+        <div >  <button class="mainchild" onclick="game_22_bomb2()" id="game_button_22_bomb2" ></button> </div>
+        <div >  <button class="mainchild" onclick="game_23_bomb2()" id="game_button_23_bomb2" ></button> </div>
+        <div >  <button class="mainchild" onclick="game_24_bomb2()" id="game_button_24_bomb2" ></button> </div>
+        <div >  <button class="mainchild" onclick="game_25_bomb2()" id="game_button_25_bomb2" ></button> </div>
+        <div class="start_game"  id="start_button">    <button class="start_btn"  onclick="start_game()" >Start </button>       </div>
+        <div id="alret_show_win" class="alret_shower hidden " >    <h1 class="alret_text " >You <span style="color: rgb(62, 255, 3);" >succefully</span> take out</h1>       </div>
+        <div id="alret_show_error" class="alret_shower hidden " >    <h1 class="alret_text " >You <span style="color: rgb(255, 74, 3);" >can not</span> take out until get <span style="color: orange;" >5</span> Gem</h1>       </div>
+        <div id="alret_show_loss" class="alret_shower hidden " >    <h1 class="alret_text " >You <span style="color: rgb(255, 74, 3);" >can not</span> take out When u loss the game</h1>       </div>
+        <div id="alret_show_gg" class="alret_shower hidden " >    <h1 class="alret_text " >You <span style="color: rgb(62, 255, 3);" >succefully</span> win the game </h1>       </div>
+    </div>
+</div>
+<div  class="gggridbtn " >
+   <div class="flf" > <button class="moneybtn" onclick="moneygive()" >Resset Money </button></div>
+   <div class="flex" style="margin-top: 30px;" > <button id="takebtn" class="takeout" onclick="takeout()" >  Take out  </button>
+
+
+   
+</div>
+   
+<div class="flf" > <button class="moneybtn" onclick="moneygive()" >Resset Money</button></div>
+</div>
+</div>
+
+
+
+</body>
+</main>
+</html>
+
+
+
+
+<audio id="song_click" >
+    <source src="sound/click.mp3" type="audio/ogg">
+    <source src="sound/click.mp3" type="audio/mpeg">
+
+  </audio>
+  
+<audio id="song_bomb" >
+    <source src="sound/bomb.mp3" type="audio/ogg">
+    <source src="sound/bomb.mp3" type="audio/mpeg">
+
+  </audio>
+  
+
+  <script src="bomb_2.js" ></script>
