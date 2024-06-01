@@ -1,0 +1,396 @@
+body{
+    background-color: rgb(22, 22, 22);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.Main{
+    border: 1px solid rgb(15, 33, 46);
+    width: auto;
+    padding-inline: 50px;
+    height: 520px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 10px;
+
+}
+
+.verymain{
+    background-color: rgb(15, 33, 46);
+    height: 540px;
+    margin: auto;
+    width: 550px;
+    margin-top: -70px;
+    border-radius: 10px;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    
+}
+.mainchild{
+border: none;
+    text-align: center;
+    margin: 3px;
+    width: 100px;
+    cursor: pointer;
+    height: 100px;
+    color: white;
+    background-color: rgb(47, 69, 83);
+    border-radius: 10px;
+    box-shadow: inset 0px -7px 1px 0px rgb(33, 55, 67);
+}
+.mainchildnew{
+    border: none;
+        text-align: center;
+        margin: 3px;
+        width: 100px;
+        height: 100px;
+        color: white;
+        background-color: rgb(47, 69, 83);
+       
+        border-radius: 10px;
+       box-shadow: inset 0px -7px 1px 0px rgb(33, 55, 67);
+    }
+.mainchild:hover{
+    background-color: rgb(56, 72, 83);
+    margin-top: -1px;
+    transition: margin-top 0.3s;
+    
+
+}
+.backgroundchenger{
+    background-color: rgb(33, 83, 70);
+
+
+}
+
+.balancegrid{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 250px;
+
+    border: 1px solid red;
+    margin: auto;
+    }
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    
+    .gem{
+     width: 60px;
+      margin-left: 0;
+      margin-top: 0px;
+     animation-name: picanim;
+     animation-duration: 0.3s;
+     animation-iteration-count: 1;
+    }
+
+    .bomb{
+       width: 70px;
+       margin-left: 13px;
+       margin-top: 0px;
+       animation-name: picanim;
+       animation-duration: 0.3s;
+       animation-iteration-count: 1;
+
+       
+    }
+    .bombanimetion{
+        animation: bombanim 2s infinite;
+        animation-delay:  0.5s;
+    }
+
+    @keyframes picanim {
+
+        0%{   opacity: 0%;          }
+        10%{     opacity: 00%;                }
+        20%{     opacity: 00%;                }
+        30%{     opacity: 00%;                }
+        40%{      opacity:0%;               }
+        50%{      opacity: 20%;              }
+        60%{       opacity: 40%;              }
+        70%{       opacity: 60%;              }
+        80%{       opacity: 80%;              }
+        90%{       opacity: 90%;              }
+        100%{      opacity: 100%;               }
+        
+    }
+    @keyframes bombanim {
+
+        0%{   opacity: 100%;          }
+        25%{     opacity: 20%;                }
+        50%{     opacity: 100%;                }
+        75%{     opacity:20%;                }
+        100%{     opacity: 100%;                }
+
+        
+    }
+    .gggridbtn {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        width: 550px;
+        margin: auto;
+        margin-top: 10px;
+        
+        }
+
+    .moneybtn{
+        width: auto;
+        height: 60px;
+        border-radius: 10px;
+        background-color: rgb(31, 31, 31);
+        border: 1px solid gray;
+        color: white;
+        cursor: pointer;
+    }
+    .flf{
+        margin-top: 30px;
+        margin-inline: 10px;
+    }
+    .takeout{
+        margin: auto;
+        border-radius: 10px;
+        height: 60px;
+        background-color: transparent;
+        cursor:pointer;
+        color: black;
+        background-color:  rgb(0, 231, 1);
+       border: 1px solid rgb(33, 55, 67);
+        font-size: large;
+        font-weight: bolder;
+        width: 300px;
+    
+    }
+    .takeout:hover{
+        transition: 0.4s;
+        background-color:  rgb(4, 153, 4);
+        -webkit-box-shadow: inset 0px -134px 62px -133px rgba(0,0,0,1);
+        -moz-box-shadow: inset 0px -134px 62px -133px rgba(0,0,0,1);
+        box-shadow: inset 0px -134px 62px -133px rgba(0,0,0,1);
+    }
+
+    .alret_shower{
+        z-index: 9999;
+        position: absolute;
+        width: 300px;
+        background-color:rgb(44,47,55);
+        opacity: 94%;
+        height: 140px;
+        border: 3px solid gray;
+        margin-left:75px;
+        margin-top: 200px;
+    }
+    
+    .hidden{
+        display: none;
+    }
+    .alret_text{
+        text-align: center;
+        color: rgb(160, 160, 160);
+        font-weight: bolder;
+        
+    }
+
+
+
+    
+.content-grid {
+    --padding-inline: 1rem;
+    --content-max-width: 900px;
+    --breakout-max-width: 1200px;
+  
+    --breakout-size: calc(
+      (var(--breakout-max-width) - var(--content-max-width)) / 2
+    );
+  
+    display: grid;
+    grid-template-columns:
+      [full-width-start] minmax(var(--padding-inline), 1fr)
+      [breakout-start] minmax(0, var(--breakout-size))
+      [content-start] min(
+        100% - (var(--padding-inline) * 2),
+        var(--content-max-width)
+      )
+      [content-end]
+      minmax(0, var(--breakout-size)) [breakout-end]
+      minmax(var(--padding-inline), 1fr) [full-width-end];
+  }
+  
+  .content-grid > :not(.breakout, .full-width),
+  .full-width > :not(.breakout, .full-width) {
+    grid-column: content;
+  }
+  
+  .content-grid > .breakout {
+    grid-column: breakout;
+  }
+  
+  .content-grid > .full-width {
+    grid-column: full-width;
+  
+    display: grid;
+    grid-template-columns: inherit;
+  }
+  
+  img.full-width {
+    width: 100%;
+    max-height: 45vh;
+    object-fit: cover;
+  }
+
+
+
+
+  .balance{
+    border: 2px solid rgb(48, 48, 48);
+    width: 200px;
+    border-radius: 10px;
+    margin: auto;
+    text-align: center;
+  }
+
+  .BALANCE_TEXT{
+    font-size: x-large;
+    color: white;
+  }
+  .BALANCE_TEXT_small{
+    font-size: large;
+    font-weight: bolder;
+    color: rgb(93, 104, 85);
+  }
+
+  .dollor{
+    font-size: x-large;
+    color: green;
+  }
+
+  .start_game{
+    width: 300px;
+    background-color:rgb(44,47,55);
+    border: 3px solid gray;
+    position: absolute;
+    margin-left: 80px;
+    margin-top: 150px;
+    
+    height: 200px;
+  }
+  .start_btn{
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    font-size: 50px;
+    font-weight: bolder;
+    color: rgb(0, 255, 0);
+    height: 100%;
+  }
+
+  .start_btn:hover{
+    background-color:rgb(41, 43, 49);
+    transition: 0.2s;
+  }
+
+
+
+  .fakemoney2{
+    position: absolute;
+    width: 100px;
+    height: 25px;
+    border: 1px solid gray;
+    border-bottom: none;
+    border-radius: 10px 10px 0px 0px;
+    margin-top: -26px;
+    text-align: center;
+    color: gray;
+  }
+
+
+  
+
+.moneyputterinp{
+
+width: 95%;
+height: 60px;
+font-size: x-large;
+background-color: rgb(30, 32, 36);
+color: white;
+text-align: center;
+border-radius: 10px;
+border: none;
+
+
+}
+
+.btngettermoney{
+    text-align: center;
+    width: 95%;
+    border: none;
+    height: 50px;
+    border-radius: 10px;
+    color: greenyellow;
+    font-size: xx-large;
+    background-color: rgb(30, 32, 36);
+cursor: pointer;
+
+}
+
+.gtp{
+    display: flex;
+    margin-top: -5px;
+    justify-content: center;
+ 
+}
+.gtp2{
+  
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+}
+
+.note{
+    width: 95%;
+    height: 35px;
+    text-align: center;
+    color: wheat;
+    padding-top: 10px;
+    border-radius: 5px;
+
+    background-color: rgb(30, 32, 36);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+
+.gemeshower{
+    width: 100px;
+    height: 45px;
+    background-color: rgb(31, 31, 31);
+    border-radius: 10px;
+    color: white;
+    padding-top: 15px;
+    text-align: center;
+    border: 1px solid gray;
+}
