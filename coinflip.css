@@ -1,0 +1,526 @@
+body{
+    background-color: rgb(22, 22, 22);
+    
+    font-family: mainfont;
+    
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: mainfont;
+    src: url(Font/static/OpenSans-Medium.ttf)
+  }
+  
+html{
+    scroll-behavior: smooth;
+}
+
+.flex{
+    justify-content: center;
+    display: flex;
+
+
+}
+
+.hidden{
+    display: none;
+}
+
+.unselectable {
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+   
+.content-grid {
+    --padding-inline: 1rem;
+    --content-max-width: 900px;
+    --breakout-max-width: 1200px;
+    --breakout-size: calc(
+      (var(--breakout-max-width) - var(--content-max-width)) / 2
+    );
+  
+    display: grid;
+
+    grid-template-columns:
+      [full-width-start] minmax(var(--padding-inline), 1fr)
+      [breakout-start] minmax(0, var(--breakout-size))
+      [content-start] min(
+        100% - (var(--padding-inline) * 2),
+        var(--content-max-width)
+      )
+      [content-end]
+      minmax(0, var(--breakout-size)) [breakout-end]
+      minmax(var(--padding-inline), 1fr) [full-width-end];
+      
+  }
+  
+  .content-grid > :not(.breakout, .full-width),
+  .full-width > :not(.breakout, .full-width) {
+    grid-column: content;
+    
+  }
+  
+  .content-grid > .breakout {
+    
+    grid-column: breakout;
+  }
+  
+  .content-grid > .full-width {
+    grid-column: full-width;
+  
+    display: grid;
+    grid-template-columns: inherit;
+  }
+  
+  img.full-width {
+    width: 100%;
+    max-height: 45vh;
+    object-fit: cover;
+  }
+
+
+
+
+.header_flex{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    color: whitesmoke;
+    font-weight: bolder;
+    font-size: larger;
+    text-align: center;
+
+}
+
+
+  .header_balance{
+
+    width: 125px;
+    height: 50px;
+    border-radius: 10px 0px 0px 10px;
+    border: 1px solid rgb(34, 34, 34);
+    text-align: center;
+  }
+
+   .header_balance:hover{
+    transition: 0.3s;
+    background-color: rgb(29, 29, 29);
+   }
+
+
+  .header_deposit{
+
+    width: 125px;
+    height: 50px;
+    border-left: none;
+    border-right: none;
+    border: 1px solid rgb(34, 34, 34);
+    border: 1px solid rgb(34, 34, 34);
+    text-align: center;
+    background-color: rgb(26, 43, 26);
+  }
+  .header_deposit:hover{
+    transition: 0.3s;
+    background-color: rgb(33, 49, 33);
+   }
+
+  .header_fakeBalance{
+
+    width: 125px;
+    height: 50px;
+    text-align: center;
+    border: 1px solid rgb(34, 34, 34);
+    border-radius: 0px 10px 10px 0px;
+    
+  }
+  .header_fakeBalance:hover{
+    transition: 0.3s;
+    background-color: rgb(29, 29, 29);
+   }
+
+  .header_balance_text{
+    margin-top: 8px;
+    font-size: 24px;
+  }
+
+  .header_deposit_text{
+    margin-top: 8px;
+
+    
+  }
+  .header_fakeBalance_text{
+    color: rgb(124, 150, 86);
+    margin-top: 8px;
+    font-size: 24px;
+  }
+
+  .header_pic{
+    width: 28px;
+    margin-inline: 2px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+  .box_maingame{
+    margin: auto;
+    width: 500px;
+    margin-top: 125px;
+    height: 400px;
+    border: 2px solid rgb(16, 28, 37);
+    background-color: rgb(15,33,46);
+    border-radius: 10px;
+  }
+
+  .box_main_coinpic{
+    width: 50%;
+    margin: auto;
+  }
+
+
+  .box_maingame_image_Flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+
+
+
+
+
+
+
+  .box_moneygetter{
+    border: 2px solid rgb(16, 20, 22);
+    background-color: rgb(44,47,55);
+    width: 450px;
+    height: 300px;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 150px;
+  }
+
+  .box_moneygetter_h1_box{
+    text-align: center;
+    margin: auto;
+    margin-top: 5px;
+    width: 80%;
+    height: 50px;
+    border-radius: 10px;
+    color: rgb(233, 233, 194);
+    font-weight: bolder;
+    font-size: larger;
+    background-color: rgb(26, 26, 26);
+  }
+
+  .box_moneygetter_flexicon_flexbox{
+    display: flex;
+    justify-content: center;
+    
+  }
+
+  .box_moneygetter_h1_text{
+
+    padding-top: 8px;
+
+  }
+
+ .box_moneygetter_flexicon_box{
+    background-color: rgb(26, 26, 26);
+   
+    color: rgb(21, 255, 0);
+    text-align: center;
+    margin: auto;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    margin-top: 25px;
+    border: 1px solid greenyellow;
+    border-radius: 50%;
+
+ }
+ .box_moneygetter_flexicon_box:hover{
+    transition: 0.3s ;
+    background-color: rgb(39, 39, 39);
+    color: rgb(12, 124, 1);
+
+ }
+
+ .icon_text_contoroler{
+    margin-top: 5px;
+ }
+ .icon_text_contorole_dollor{
+    margin-left: 1px;
+ }
+ .icone_plus{
+    margin-top: -8px;
+    margin-left: 1px;
+    font-size: 35px;
+ }
+ .icone_minus{
+    font-size: 45px;
+    margin-top: -19px;
+ }
+.icon_dollor_flexicon{
+    font-size: x-large;
+}
+
+
+
+
+.box_moneygetter_input_margin{
+    margin-top: 30px;
+}
+
+.box_moneygetter_input_input{
+    background-color: rgb(26, 26, 26);
+    width: 80%;
+    height: 75px;
+    color: whitesmoke;
+    text-align: center;
+    border: none;
+    font-weight: bolder;
+    font-size: x-large;
+    border-radius: 10px;
+}
+
+
+.box_moneygetter_button_margin{
+    margin-top: 12px;
+}
+
+.box_moneygetter_button{
+    width: 80%;
+    color: rgb(41, 248, 0);
+    background-color: rgb(26, 26, 26);
+    border-radius: 10px;
+    border: none;
+    font-size: x-large;
+    font-weight: bolder;
+    cursor: pointer;
+    height: 50px;
+}
+
+.box_moneygetter_button:hover{
+    background-color: rgb(32, 32, 32);
+}
+.box_moneygetter_input_input:hover{
+    background-color: rgb(32, 32, 32);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; 
+}
+
+input[type=number] {
+    -moz-appearance:textfield; 
+}
+
+
+
+
+@media only screen and (max-width: 525px) {
+    .box_moneygetter{
+        width: 100%;
+      }
+      .box_moneygetter_button{
+        width: 90%;
+      }
+      .box_moneygetter_input_input{
+        width: 90%;
+      }
+      .box_moneygetter_h1_box{
+        width: 90%;
+      }
+  }
+  @media only screen and (max-width: 525px) {
+    .box_moneygetter_h1_box{
+      font-size: 15px;
+      }
+  }
+
+
+
+
+
+
+
+
+  .box_coin_select{
+    border: 2px solid rgb(16, 20, 22);
+    background-color: rgb(44,47,55);
+    width: 450px;
+    height: 300px;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 150px;
+  }
+
+  .box_coin_select_coin{
+    width: 200px;
+
+  }
+
+  .box_coin_select_h1{
+  text-align: center;
+  background-color: rgb(26, 26, 26);
+  color: whitesmoke;
+  font-size: x-large;
+  font-weight: bolder;
+  margin: auto;
+  margin-top: 10px;
+  width: 80%;
+  border-radius: 10px;
+  height: 50px;
+  }
+.box_coin_select_h1_font{
+  padding-top: 5px;
+}
+  .coin_margin_Box{
+  margin-top: 30px;
+  }
+
+.box_coin_select_coin:hover{
+  background-color: rgb(37, 40, 46);
+  border-radius: 50%;
+  margin-top: -15px;
+transition: 0.1s;
+}
+
+
+
+  @media only screen and (max-width: 475px) {
+    .box_coin_select{
+      width: 100%;
+    }
+    .box_coin_select_coin{
+      width: 150px;
+  
+    }
+  }
+
+
+  @media only screen and (max-width: 335px) {
+    .box_coin_select_coin{
+      width: 100px;
+  
+    }
+
+  }
+
+
+
+  @media only screen and (max-width: 530px) {
+    .box_maingame{
+      width: 100%;
+  
+    }
+
+  }
+
+
+
+  @media only screen and (max-width: 330px) {
+    .header_flex{
+      display: flex;
+    }
+    .header_balance_text{
+     font-size: 20px;
+    }
+    .header_fakeBalance_text{
+      font-size: 20px;
+    }
+
+
+
+  }
+
+
+
+  @media only screen and (max-width: 275px) {
+    .header_flex{
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      margin: auto;
+  
+    }
+    .header_balance{
+      border-radius: 0;
+     }
+     .header_fakeBalance{
+      border-radius: 0;
+     }
+ 
+  }
+
+
+
+
+.flipercoin{
+  animation: flipercoinanim 4s 1 ;
+}
+.coinwinshower{
+  animation: coinwinshoweranim 0.5s 1 ;
+}
+
+
+  @keyframes flipercoinanim {
+
+    0%{        opacity: 100%;        }
+    10%{       opacity: 90%;            }
+    20%{       opacity: 70%;            }
+    30%{       opacity: 50%;            }
+    4%{       opacity: 30%;            }
+    50%{       opacity: 10%;            }
+    60%{       opacity: 0%;            }
+
+    100%{       opacity: 0%;            }
+    
+  }
+
+  @keyframes coinwinshoweranim {
+    0% {     opacity: 0%;      }
+    10% {    opacity: 10%;      }
+    35% {    opacity: 30%;      }
+    55% {   opacity: 50%;       }
+    75% {   opacity: 60%;       }
+    85% {    opacity:80%;      }
+    100% {   opacity: 100%;       }
+
+
+
+
+  }
+
+
+
+  .home{
+    width: 35px;
+    background-color: rgb(44,47,55);
+    height: 35px;
+   margin-left: 20px;
+    margin-top: 14px;
+    border-radius: 0 0 5px 5px;
+    opacity: 50%;
+    cursor: pointer;
+  }
+
+  .homewid{
+
+    width: 35px;
+  }
