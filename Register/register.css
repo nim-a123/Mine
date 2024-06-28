@@ -264,3 +264,154 @@ background: linear-gradient(to right, #36FF00 0%, #48ff79 54%);
     }
 
   }
+
+
+
+.divestor{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 20px;
+}
+.baby{
+    width: 250px;
+    height:60px;
+    text-align: center;
+    color: rgb(218, 224, 212);
+    font-size: larger;
+    font-weight: bolder;
+  
+    background-color: rgb(39, 39, 39);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 20px;
+    position: relative;
+   border-radius: 5px 5px 0px 0px;
+   z-index: 99;
+
+
+
+}
+
+.baby::after{
+
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(154, 29, 6);
+    animation: anim 5.9s linear forwards;
+    
+
+}
+
+@keyframes anim {
+
+    100%{ width: 0px;  }
+    
+}
+
+.svg{
+  width: 35px;
+  margin-inline: 20px;
+}
+
+
+
+
+
+.baby_green{
+    color: rgb(228, 228, 228);
+    width: 300px;
+    height:60px;
+    text-align: center;
+    font-size: larger;
+    font-weight: bolder;
+    background-color: rgb(39, 39, 39);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 20px;
+    position: relative;
+   border-radius: 5px 5px 0px 0px;
+   z-index: 99;
+}
+.baby_green::after{
+
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(40, 255, 40);
+    animation: anim 5.9s linear forwards;
+}
+
+@media only screen and (max-width: 831px) {
+    .baby{
+      width: 100%;
+   
+    }
+    .baby_green{
+        width: 100%;
+        font-size: medium;
+     
+      }
+    .svg{
+        width: 35px;
+        margin-inline: 8px;
+      }
+
+    .divestor{
+        position: absolute;
+        width: 50%;
+        bottom: 0px;
+        right: 20%;
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        overflow: hidden;
+        padding: 20px;
+
+    }
+      
+  }
+
+  @media only screen and (max-width: 361px) {
+    .baby{
+      width: 100%;
+      font-size: 18px;
+   
+    }
+    .baby_green{
+        width: 100%;
+     
+      }
+    .svg{
+        width: 35px;
+        margin-inline: 8px;
+      }
+
+    .divestor{
+        position: absolute;
+        width: 50%;
+        bottom: 0px;
+        right: 20%;
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        overflow: hidden;
+        padding: 20px;
+
+    }
+      
+  }
+
