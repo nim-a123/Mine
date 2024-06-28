@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="coinflip.css">
+</head>
+<body>
+<main class="content-grid" >
+
+<div class="header_flex unselectable" > 
+<div class="header_balance " >   <div class="header_balance_text" > <span style="color: green;" >$</span> <span id="money_shower" >?</span>   </div>     </div>
+
+<div class="header_deposit" onclick="moneygive()" >   <div class="header_deposit_text flex" > <span><img class="header_pic" src="photo-coinflip/wallet.svg" alt=""></span> Deposit</div>       </div>
+
+<div class="header_fakeBalance" >  <div class="header_fakeBalance_text" >  <span id="money_fakebalance_shower" >?</span>    </div>        </div>
+
+</div>
+
+<div class="box_moneygetter unselectable  card " id="box_moneygetter" >       
+
+    <div class="box_moneygetter_h1_box" >  
+        
+        <div class="box_moneygetter_h1_text" > Enter Amount money to play  </div>
+
+    </div>
+
+        <div class="box_moneygetter_flexicon_flexbox " >
+
+           <button class="box_moneygetter_flexicon_box " onclick="jamblaance()" >   <div class="icone_plus"  >+</div></button>
+
+            <button class="box_moneygetter_flexicon_box " onclick="zarbblaance()" >   <div class="icon_size" >x2</div>   </button> 
+
+            <button   class="box_moneygetter_flexicon_box " onclick="allinbalance()">  <div class="icon_dollor_flexicon" >$</div>  </button>   
+
+            <button class="box_moneygetter_flexicon_box " onclick="taghsimbalance()"> <div class="icon_size" >/2</div> </button>           
+
+               <button class="box_moneygetter_flexicon_box" onclick="menhablaance()">  <div class="icone_minus"  >-</div> </button>      
+              
+              
+              
+              </div>
+
+
+            <div class="box_moneygetter_input_margin flex" >
+
+                <input class="box_moneygetter_input_input" onkeyup="keydowninputcheaker()" id="input_money_getter" oninput="this.value = this.value.replace(/\D+/g, '')" placeholder="Enter your value" type="number">
+    
+            </div>
+
+
+            <div class="flex box_moneygetter_button_margin" >
+
+                <button class="box_moneygetter_button" onclick="start()"  >  Start  </button>
+
+            </div>
+
+            <div class="home " >
+             <a href="index.html"> <img class="homewid" src="photo-coinflip/homeicon.svg"  alt=""></a>
+            </div>
+
+        </div>
+
+       
+    
+  
+
+
+
+</div>
+
+
+
+
+<div class="box_maingame unselectable hidden" id="box_maingame"  >
+
+<div class="box_maingame_image_Flex " > <span id="box_game_usercoinshower" class="flex"   > </span>       </div>
+
+
+
+</div>
+
+
+
+<div class="box_coin_select  unselectable hidden" id="box_coin_select" >
+    <div class="box_coin_select_h1" >   <div class="box_coin_select_h1_font" >Select your side </div>       </div>
+<div class="coin_margin_Box flex" >
+<div>    <img class="box_coin_select_coin " src="photo-coinflip/coin_head.png" onclick="coin_head()" alt="">      </div>
+
+<div>   <img class="box_coin_select_coin " src="photo-coinflip/coin_tail.png" onclick="coin_tail()" alt="">        </div>
+</div>
+
+</div>
+
+
+<audio id="sound_hosh" >
+    <source src="coinflip_sound/hosh.mp3" type="audio/ogg">
+    <source src="coinflip_sound/hosh.mp3" type="audio/mpeg">
+
+  </audio>
+
+  <audio  id="sound_win" >
+    <source src="coinflip_sound/win flip.mp3" type="audio/ogg">
+    <source src="coinflip_sound/win flip.mp3" type="audio/mpeg">
+
+  </audio>
+
+  <audio id="sound_loss" >
+    <source src="coinflip_sound/lossflip.mp3" type="audio/ogg">
+    <source src="coinflip_sound/lossflip.mp3" type="audio/mpeg">
+
+  </audio>
+
+  <audio  id="sound_noch">
+    <source src="coinflip_sound/nochclick.mp3" type="audio/ogg">
+    <source src="coinflip_sound/nochclick.mp3" type="audio/mpeg">
+
+  </audio>
+
+  <audio  id="sound_Coindrop">
+    <source src="coinflip_sound/coin drop.mp3" type="audio/ogg">
+    <source src="coinflip_sound/coin drop.mp3" type="audio/mpeg">
+
+  </audio>
+
+
+</main>
+</body>
+</html>
+
+<script src="coinflip_buttons.js/coinflip.js" ></script>
+
+
