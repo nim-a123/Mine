@@ -1,0 +1,6 @@
+
+name leantgh = 12
+
+email = ????
+
+password  = 8 / 30
