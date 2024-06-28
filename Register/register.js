@@ -100,7 +100,7 @@ function toaster(){
 
     let toast = document.createElement('div');
     toast.classList.add('baby');
-    toast.innerHTML = '<img src="error toater.png" class="svg" >' + massge_keeper;
+    toast.innerHTML = '<img src="/Register/error toater.png" >' + massge_keeper;
     divestor.appendChild(toast);
     setTimeout(()=>{
         toast.remove();
@@ -110,7 +110,7 @@ function toaster_win(){
 
   let toast = document.createElement('div');
   toast.classList.add('baby_green');
-  toast.innerHTML = '<img src="correct toater.svg" class="svg" >' + massge_keeper;
+  toast.innerHTML = '<img src="/Register/correct toater.svg" class="svg" >' + massge_keeper;
   divestor.appendChild(toast);
   setTimeout(()=>{
       toast.remove();
